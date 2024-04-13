@@ -1,0 +1,234 @@
+*{
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  .container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    color: #333;
+    font-size: 36px;
+    font-weight: bold;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  input[type="text"] {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  #board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 5px;
+    margin: 20px auto;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cell {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .cell:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .popup p {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .popup button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .cell.x {
+    color: rgb(228, 59, 59);
+  }
+
+  
+  .popup button:hover {
+    background-color: #0056b3;
+  }
+  
+  #btn-container {
+    margin-top: 20px;
+  }
+  
+h1{
+    font-size: 50px;
+    padding: 2% 0px;
+    z-index: 100;
+}
+
+#start-btn{
+    margin-bottom: 2%;
+}
+
+.inputs{
+    display: block;
+    justify-content: center;
+}
+
+.inputs div{
+    padding-bottom: 2%;
+}
+
+button{
+  box-shadow: 0px 5px 5px gray;
+  transition: transform 0.3s ease;
+}
+
+button:hover{
+  animation: jump 0.3s;
+}
+
+@keyframes jump {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); } /* La altura del salto */
+  100% { transform: translateY(0); }
+}
+
+#restart-btn, #start-btn{
+  background-color: green;
+}
+
+.main-container{
+  background-color: #adbfbe;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='152' height='152' viewBox='0 0 152 152'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='temple' fill='%23fdfbfe' fill-opacity='0.33'%3E%3Cpath d='M152 150v2H0v-2h28v-8H8v-20H0v-2h8V80h42v20h20v42H30v8h90v-8H80v-42h20V80h42v40h8V30h-8v40h-42V50H80V8h40V0h2v8h20v20h8V0h2v150zm-2 0v-28h-8v20h-20v8h28zM82 30v18h18V30H82zm20 18h20v20h18V30h-20V10H82v18h20v20zm0 2v18h18V50h-18zm20-22h18V10h-18v18zm-54 92v-18H50v18h18zm-20-18H28V82H10v38h20v20h38v-18H48v-20zm0-2V82H30v18h18zm-20 22H10v18h18v-18zm54 0v18h38v-20h20V82h-18v20h-20v20H82zm18-20H82v18h18v-18zm2-2h18V82h-18v18zm20 40v-18h18v18h-18zM30 0h-2v8H8v20H0v2h8v40h42V50h20V8H30V0zm20 48h18V30H50v18zm18-20H48v20H28v20H10V30h20V10h38v18zM30 50h18v18H30V50zm-2-40H10v18h18V10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");  
+}
+
+#result-text{
+  padding: 10px 0px;
+  font-weight: bold;
+}
+
+#result-popup{
+  background-color: #f1f1f1;
+  border: 2px solid gray;
+  border-style: dashed;
+}
+
+.cell{
+  border-color: rgb(124, 124, 124);
+  border-radius: 5px;
+}
+
+#turn{
+  font-weight: bold; 
+  padding: 30px 0 10px 0;
+}
+
+#board{
+  margin: 0;
+}
+
+.juego{
+  margin-bottom: 10px;
+}
+
+.espaciado{
+  margin-top: 20px;
+}
+
+.go{
+  margin-top: 15px;
+}
+
+.container{
+  margin: 0px 20%; 
+  box-shadow: 0px 5px 20px rgb(56, 56, 56);
+}
+
+@media (max-width: 800px) {
+  .container{
+    margin: 0;
+  }
+
+  .cell{
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 5px;
+    margin: 0px auto;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+  }
+
+  .container{
+    padding: 7% 0px;
+  }
+}
+
+.cell{
+  font-weight: bold;
+  font-size: 40px;
+}
+
